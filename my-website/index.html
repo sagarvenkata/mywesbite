@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sagar Venkata — Lead Product Manager at Uber. Former Amazon Health product leader. IIM Ahmedabad · IIT Madras." />
+  <title>Sagar Venkata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      try {
+        var k = "sagar-portfolio-theme";
+        var t = localStorage.getItem(k);
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__logo" href="#top">Sagar Venkata</a>
+      <div class="nav__middle">
+        <ul class="nav__list" id="nav-menu">
+          <li><a class="nav__link" href="#work" data-section="work">Work</a></li>
+          <li><a class="nav__link" href="#projects" data-section="projects">Projects</a></li>
+          <li><a class="nav__link" href="#writing" data-section="writing">Writing</a></li>
+          <li><a class="nav__link" href="#skills" data-section="skills">Skills</a></li>
+          <li><a class="nav__link" href="#education" data-section="education">Education</a></li>
+          <li><a class="nav__link" href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav__end">
+        <div class="theme-toggle" role="group" aria-label="Site theme">
+          <button type="button" class="theme-toggle__btn" data-set-theme="light" aria-pressed="false">Light</button>
+          <button type="button" class="theme-toggle__btn" data-set-theme="dark" aria-pressed="false">Dark</button>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="nav__backdrop" id="nav-backdrop" hidden></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section section--fade" id="hero" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-avatar-wrap">
+            <figure class="intro-avatar" id="intro-avatar">
+              <!-- Add images/avatar.jpg to your repo so everyone sees it on the web (see images/README.md). -->
+              <img
+                id="intro-avatar-img"
+                class="intro-avatar__img"
+                alt=""
+                width="88"
+                height="88"
+                decoding="async"
+                hidden
+                data-default-src="images/avatar.jpg"
+              />
+              <div class="intro-avatar__fallback" aria-hidden="true">SV</div>
+            </figure>
+            <div class="intro-avatar-actions">
+              <input
+                type="file"
+                id="avatar-file-input"
+                class="sr-only"
+                accept="image/jpeg,image/png,image/webp,image/gif"
+                aria-label="Choose profile photo"
+              />
+              <label class="intro-avatar-upload" for="avatar-file-input">Upload photo</label>
+              <button type="button" class="intro-avatar-remove" id="avatar-remove-btn" hidden>
+                Remove photo
+              </button>
+            </div>
+          </div>
+          <div class="intro-copy">
+            <h1 id="intro-heading">Sagar Venkata</h1>
+            <p class="intro-lede">
+              Product leader @ <a href="https://www.uber.com" rel="noopener noreferrer" target="_blank">Uber</a>
+              (growth platform products, Gen-AI for marketing). Previously shipped
+              <a href="https://www.amazon.in" rel="noopener noreferrer" target="_blank">Amazon</a>
+              Clinic &amp; Diagnostics in India (~100M+ customers), and earlier roles across freight, transportation, and
+              <a href="https://www.flipkart.com" rel="noopener noreferrer" target="_blank">Flipkart</a>.
+              MBA <a href="https://www.iima.ac.in" rel="noopener noreferrer" target="_blank">IIM Ahmedabad</a>,
+              dual degree <a href="https://www.iitm.ac.in" rel="noopener noreferrer" target="_blank">IIT Madras</a>.
+              Based in Bengaluru.
+            </p>
+            <div class="intro-social" aria-label="Social links">
+              <a class="intro-social__link" href="https://www.linkedin.com/in/sagarvenkata/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM3.554 20.452h3.564V9H3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a class="intro-social__link" href="https://github.com/sagarvenkata" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a class="intro-social__link" href="https://sagarvenkata-product-leader.lovable.app/" target="_blank" rel="noopener noreferrer" aria-label="Website">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </a>
+              <a class="intro-social__link" href="mailto:mailvenkatasagar@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+            <p class="intro-actions">
+              <a href="#work">Work history</a>
+              <span class="intro-actions__sep" aria-hidden="true">·</span>
+              <a href="#writing">Writing</a>
+              <span class="intro-actions__sep" aria-hidden="true">·</span>
+              <a href="#contact">Contact</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title" id="work-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/><rect x="8" y="6" width="8" height="4" rx="1"/></svg>
+            </span>
+            Work
+          </h2>
+          <a class="section-head__action" href="mailto:mailvenkatasagar@gmail.com">
+            Email
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </header>
+        <ul class="work-list">
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Uber</h3>
+              <span class="job__years">Nov 2025 – Present</span>
+            </div>
+            <p class="job__role">Lead Product Manager · Growth platform products</p>
+            <p class="job__desc">
+              Managing three distinct platform products with a Gen-AI lens for growth marketing. Launching image-generation and copy-generation capabilities to speed up campaign creation and marketing workflows.
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Amazon Health</h3>
+              <span class="job__years">Jun 2021 – Nov 2025</span>
+            </div>
+            <p class="job__role">Product Leader</p>
+            <p class="job__desc">
+              Launched Amazon Clinic and Amazon Diagnostics for customers in India (~100M+), among Amazon’s first healthcare bets in the country—often with a single-pizza team. Scaled Clinic from 0 to 1M+ users in six months of beta with ~5% conversion, 10K+ consults, and CSAT 4.87/5 from 1,500+ data points.
+            </p>
+            <p class="job__desc">
+              Led the India diagnostics charter across evaluation, diligence, investments, and integrations for at-home care—first worldwide for Amazon. Shipped Diagnostics in four months. Earned top-performer ratings three years in a row across two roles. Piloting a medical-grade LLM-based health assistant across the digital care journey; delivered one customer-facing and two clinician-facing products with benchmarking, research, and UAT.
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Amazon Freight</h3>
+              <span class="job__years">Jun 2020 – May 2021</span>
+            </div>
+            <p class="job__role">Senior Product Manager</p>
+            <p class="job__desc">
+              Led a team of five PMs and BAs and helped build a 50+ person org for Amazon Freight in North America. Shipped B2B integration products and processes that executed 100K+ truck loads for shippers, contributing to $100M+ top line for ATS in 2020–21.
+            </p>
+            <p class="job__desc">
+              Built trailer management for NA Freight—optimizing 1.5K+ of 40K+ trailers in-network and reducing fixed cost by ~$60M. Partnered with enterprise shippers on EDI during contract and bid cycles (clients included P&amp;G, LG, Coca-Cola, PepsiCo, and others).
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Amazon Transportation Services</h3>
+              <span class="job__years">Feb 2019 – May 2020</span>
+            </div>
+            <p class="job__role">Product Manager</p>
+            <p class="job__desc">
+              Built capacity planning for relay operations in North America and Europe as the org scaled from ~250 to 2,500+. Single point of contact for capacity planning for teams responsible for 150M+ customer orders per week.
+            </p>
+            <p class="job__desc">
+              Planned and executed Prime Day and Black Friday / Cyber Monday for middle mile in NA in 2019 and 2020. Built middle-mile forecasting models and peak execution that delivered ~$14.5M in annualized savings.
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Flipkart</h3>
+              <span class="job__years">Jun 2015 – Jun 2016</span>
+            </div>
+            <p class="job__role">Product Analyst</p>
+            <p class="job__desc">
+              Cut semi-variable cost by ₹42 crore per year with a cross-deployment tool; delivered ₹32 crore per year in savings and 15.3% productivity lift through work-measurement systems. Designed a span-of-control framework across 5,000+ employees for ₹16 crore+ per year in savings.
+            </p>
+            <p class="job__desc">
+              Reduced mis-shipments ~6% by closing 60+ failure modes via FMEA—critical to Flipkart’s first ISO certification for a fulfillment center. Designed and rolled out a pan-India crisis management and business continuity plan impacting 7,000+ employees ahead of the Walmart partnership.
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__top">
+              <h3 class="job__company">Internships</h3>
+              <span class="job__years">2017</span>
+            </div>
+            <p class="job__role">Accenture Strategy · Andhra Pradesh Government</p>
+            <p class="job__desc">
+              <strong>Accenture Strategy (Apr–Jun 2017), Mumbai.</strong> Live project for a $1.4B+ pharmaceutical client in an accelerating performance program, including VP-level working sessions on performance metrics.
+            </p>
+            <p class="job__desc">
+              <strong>Andhra Pradesh Government (Dec 2017), Vijayawada.</strong> Designed a PPP model to implement intelligent transport systems with a focus on project viability.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title" id="projects-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+            </span>
+            Projects
+          </h2>
+        </header>
+        <ul class="projects-grid">
+          <li class="project-tile">
+            <h3 class="project-tile__title">Property Due-Diligence Engine</h3>
+            <p class="project-tile__desc">Intelligence engine for Indian real estate buyers and lenders. Risk-scores any Bengaluru property using government records, flood maps, and title data.</p>
+            <span class="project-tile__tag">Real Estate · AI</span>
+          </li>
+          <li class="project-tile">
+            <h3 class="project-tile__title">IIT JEE Career Tracker</h3>
+            <p class="project-tile__desc">Open-source platform mapping the career trajectories of top JEE rankers from 2009–2020. Where do India's highest achievers actually end up?</p>
+            <span class="project-tile__tag">Data · Open Source</span>
+          </li>
+          <li class="project-tile">
+            <h3 class="project-tile__title">Cab Aggregator Fleet Model</h3>
+            <p class="project-tile__desc">Lean ride-sharing business model for Bengaluru using fleet leasing and dynamic driver allocation. Full unit economics modeled.</p>
+            <span class="project-tile__tag">Business · Ops</span>
+          </li>
+          <li class="project-tile">
+            <h3 class="project-tile__title">AI Twitter Growth Channel</h3>
+            <p class="project-tile__desc">AI-curated content channel on X using automation and newsjacking to scale organic reach. Target: 10M views/day.</p>
+            <span class="project-tile__tag">AI · Social</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="writing" aria-labelledby="writing-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title" id="writing-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            </span>
+            Writing
+          </h2>
+          <a class="section-head__action" href="#writing">
+            View all
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+        </header>
+        <p class="section__lede">Long-form notes on product, AI, and markets — more pieces coming soon.</p>
+        <ul class="writing-grid">
+          <li>
+            <a class="writing-card" href="#">
+              <div class="writing-card__thumb" role="presentation"></div>
+              <div class="writing-card__body">
+                <div class="writing-card__title">Coming Soon — Essay on AI in Indian Real Estate</div>
+                <div class="writing-card__excerpt">How buyers and lenders can use structured data and risk models to move faster with confidence.</div>
+                <span class="writing-card__meta">Personal blog · 2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="writing-card" href="#">
+              <div class="writing-card__thumb" role="presentation"></div>
+              <div class="writing-card__body">
+                <div class="writing-card__title">Coming Soon — Lessons from Amazon &amp; Uber Product Leadership</div>
+                <div class="writing-card__excerpt">Zero-to-one healthcare at scale, platform bets, and what changes when you move from growth to regulated domains.</div>
+                <span class="writing-card__meta">Medium · 2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="writing-card" href="#">
+              <div class="writing-card__thumb" role="presentation"></div>
+              <div class="writing-card__body">
+                <div class="writing-card__title">Coming Soon — Why JEE Rank Doesn't Predict Success</div>
+                <div class="writing-card__excerpt">Career trajectories, selection systems, and how to think about talent ten years out.</div>
+                <span class="writing-card__meta">Substack · 2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="writing-card" href="#">
+              <div class="writing-card__thumb" role="presentation"></div>
+              <div class="writing-card__body">
+                <div class="writing-card__title">Coming Soon — Gen-AI for Growth Marketing</div>
+                <div class="writing-card__excerpt">Image and copy generation in the campaign lifecycle—what works, what breaks, and how teams adopt.</div>
+                <span class="writing-card__meta">Personal blog · 2026</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title" id="skills-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            </span>
+            Skills
+          </h2>
+        </header>
+        <p class="skills-inline">
+          <strong>Core:</strong> product management, product development, GTM &amp; strategy, market research, team leadership.
+          <strong> Craft:</strong> product design &amp; UI/UX, zero-to-one launches, Gen-AI platform thinking, operational scale-ups.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="section-head__title" id="education-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </span>
+            Education
+          </h2>
+        </header>
+        <ul class="edu-grid">
+          <li class="edu-block">
+            <h3>IIM Ahmedabad</h3>
+            <p class="edu-degree">MBA · Post Graduate Programme in Management</p>
+            <p class="edu-detail">Jun 2016 – Mar 2018 · CGPA 3.4/4.3 · Top 15% of the batch</p>
+          </li>
+          <li class="edu-block">
+            <h3>IIT Madras</h3>
+            <p class="edu-degree">Dual degree</p>
+            <p class="edu-detail">Jun 2010 – May 2015 · CPI 8.4/10 · Top 15% of the batch</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--fade" id="contact" aria-labelledby="contact-heading">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <h2 class="section-head__title" id="contact-heading">
+            <span class="section-head__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </span>
+            Contact
+          </h2>
+        </header>
+        <p class="contact__intro">
+          Open to conversations on growth platforms, healthcare, Gen-AI, and ambitious product work.
+        </p>
+        <div class="contact__icons">
+          <a class="contact-icon" href="https://www.linkedin.com/in/sagarvenkata/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="contact-icon__svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM3.554 20.452h3.564V9H3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a class="contact-icon" href="https://github.com/sagarvenkata" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="contact-icon__svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a class="contact-icon" href="https://sagarvenkata-product-leader.lovable.app/" target="_blank" rel="noopener noreferrer" aria-label="Website">
+            <svg class="contact-icon__svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </a>
+          <a class="contact-icon contact-icon--wide contact-icon--email" href="mailto:mailvenkatasagar@gmail.com" id="email-link" aria-label="Email — tap to copy">
+            <svg class="contact-icon__svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span class="contact-icon__email-text" aria-hidden="true">mailvenkatasagar [at] gmail [dot] com</span>
+          </a>
+          <a class="contact-icon contact-icon--wide contact-icon--phone" href="tel:+919042950173" aria-label="Phone">
+            <svg class="contact-icon__svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span class="contact-icon__phone-text" aria-hidden="true">+91 90429 50173</span>
+          </a>
+        </div>
+        <p class="contact__email-hint">Tap the email tile to copy the address or open your mail app.</p>
+        <div class="email-tooltip" id="email-tooltip" role="status" aria-live="polite" hidden>Email copied!</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section--fade">
+    <div class="container">
+      <p class="footer__text">© 2026 Sagar Venkata</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

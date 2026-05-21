@@ -1,0 +1,5 @@
+# Netlify: serve the static site from my-website/
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "my-website"
