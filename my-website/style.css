@@ -476,13 +476,6 @@ a:hover {
   border: 0;
 }
 
-.intro-avatar-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
 .intro-avatar {
   margin: 0;
   width: 5.5rem;
@@ -517,60 +510,6 @@ a:hover {
   letter-spacing: -0.03em;
   color: var(--text-muted);
   background: var(--thumb-bg);
-}
-
-.intro-avatar-actions {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem 0.65rem;
-  max-width: 12rem;
-}
-
-.intro-avatar-upload {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
-  cursor: pointer;
-}
-
-.intro-avatar-upload:hover {
-  color: var(--link-hover);
-  text-decoration-color: color-mix(in srgb, currentColor 70%, transparent);
-}
-
-.intro-avatar-upload:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-.intro-avatar-remove {
-  font: inherit;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-}
-
-.intro-avatar-remove:hover {
-  color: var(--text);
-}
-
-.intro-avatar-remove:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 3px;
-  border-radius: 2px;
 }
 
 .intro-copy h1 {

@@ -10,7 +10,7 @@ This folder is a **static site** (HTML, CSS, JavaScript). No server code is requ
 
 ### Drag and drop (no Git required)
 
-1. On your computer, open the `my-website` folder and add your photo as `images/avatar.jpg` (see `images/README.md`).
+1. On your computer, open the `my-website` folder. The site ships with `images/avatar.svg`; add `images/avatar.jpg` and point the hero `<img>` at it if you want a real headshot (see `images/README.md`).
 2. Zip **the contents** of `my-website` (so the zip opens to `index.html` at the top level, not a single nested `my-website` folder).
 3. Go to [https://app.netlify.com/drop](https://app.netlify.com/drop) and sign up / log in.
 4. Drag the zip onto the page. Netlify gives you a URL like `https://random-name.netlify.app`.
@@ -60,7 +60,7 @@ If the site must live at the **root** of `username.github.io` (user site), the f
 
 ## Checklist before you share the link
 
-- [ ] `images/avatar.jpg` is in the repo (or zip) if you want the headshot for **everyone** (not only your browser).
+- [ ] Hero avatar: default `images/avatar.svg` is fine for everyone; use `images/avatar.jpg` + update `src` in `index.html` for a personal photo (see `images/README.md`).
 - [ ] Open the live URL in an **incognito/private** window to confirm it looks right (no reliance on your own `localStorage`).
 - [ ] Click through sections and the theme toggle once on the live URL.
 
