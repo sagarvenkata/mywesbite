@@ -1,12 +1,11 @@
 # Hero avatar (same for every visitor)
 
-The hero uses **`avatar.svg`** in this folder by default so everyone sees the same image on the live site.
+The hero uses **`avatar.png`** in this folder. Use a **square-ish** headshot (PNG or JPEG); keep the filename and `src` in `index.html` in sync (`images/avatar.png` or `images/avatar.jpg`).
 
-To use your **headshot** instead:
+**Important:** The file extension must match the real image format. A PNG saved as `.svg` will break in the browser (wrong `Content-Type` on hosts like Netlify).
 
-1. Export a square-ish photo (JPEG or WebP, at least ~400×400).
-2. Save it here as **`avatar.jpg`** (or `avatar.webp`).
-3. In `index.html`, set the hero image `src` to `images/avatar.jpg` (or `.webp`).
-4. Commit and deploy.
+To switch format:
 
-Remove or replace `avatar.svg` if you no longer need the initials graphic.
+1. Save your photo as **`avatar.jpg`** or **`avatar.webp`** (or keep **`avatar.png`**).
+2. In `index.html`, set the hero `<img>` `src` to match (e.g. `images/avatar.jpg`).
+3. Commit and deploy.
