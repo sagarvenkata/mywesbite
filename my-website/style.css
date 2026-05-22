@@ -33,6 +33,12 @@ html {
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-tooltip: 0 6px 24px rgba(0, 0, 0, 0.12);
   --accent-nav: #141414;
+  /* Work highlights + timeline */
+  --hl-verb: #5b21b6;
+  --hl-metric: #0f766e;
+  --hl-impact: #9a3412;
+  --timeline-accent: #4f46e5;
+  --timeline-line: color-mix(in srgb, var(--text) 18%, var(--border));
 }
 
 html[data-theme="dark"] {
@@ -51,6 +57,11 @@ html[data-theme="dark"] {
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
   --shadow-tooltip: 0 8px 28px rgba(0, 0, 0, 0.45);
   --accent-nav: #ececec;
+  --hl-verb: #c4b5fd;
+  --hl-metric: #5eead4;
+  --hl-impact: #fdba74;
+  --timeline-accent: #a5b4fc;
+  --timeline-line: color-mix(in srgb, var(--text-muted) 55%, transparent);
 }
 
 *,
@@ -118,6 +129,23 @@ a:hover {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--text-muted);
+}
+
+/* Inline emphasis (work history): verbs · metrics · impact phrases */
+.hl-v {
+  font-weight: 600;
+  color: var(--hl-verb);
+}
+
+.hl-n {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--hl-metric);
+}
+
+.hl-i {
+  font-weight: 600;
+  color: var(--hl-impact);
 }
 
 .container {
@@ -586,7 +614,19 @@ a:hover {
   user-select: none;
 }
 
-/* ----- Work (flat blocks) ----- */
+/* ----- Work (timeline + highlights) ----- */
+.work-hl-legend {
+  margin: 0 0 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.work-hl-legend__sep {
+  margin-inline: 0.35rem;
+  opacity: 0.45;
+  user-select: none;
+}
+
 .work-list {
   list-style: none;
   margin: 0;
@@ -596,9 +636,20 @@ a:hover {
   gap: 0;
 }
 
-.job {
+#work .job {
+  display: grid;
+  grid-template-columns: minmax(4.25rem, 5.5rem) minmax(0, 1fr);
+  gap: 0 0.85rem;
+  align-items: stretch;
   padding-block: 1.75rem;
   border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 40rem) {
+  #work .job {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0 1.25rem;
+  }
 }
 
 .job:first-child {
@@ -607,6 +658,66 @@ a:hover {
 
 .job:last-child {
   border-bottom: none;
+}
+
+.job__time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.1rem;
+}
+
+.job__time-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 40rem) {
+  .job__time-label {
+    font-size: 0.8125rem;
+  }
+}
+
+.job__time-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  min-height: 2rem;
+}
+
+.job__time-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: var(--radius-full);
+  background: var(--bg-elevated);
+  border: 2px solid var(--timeline-accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--bg) 85%, transparent);
+}
+
+.job__time-line {
+  flex: 1;
+  width: 2px;
+  min-height: 1.25rem;
+  margin-top: 5px;
+  background: var(--timeline-line);
+  border-radius: 1px;
+}
+
+.work-list .job:last-child .job__time-line {
+  display: none;
+}
+
+.job__main {
+  min-width: 0;
 }
 
 .job__top {
@@ -625,16 +736,15 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
-.job__years {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
 .job__role {
   margin: 0 0 0.65rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-muted);
+}
+
+.job__main > .job__top + .job__desc {
+  margin-top: 0.5rem;
 }
 
 .job__desc {
